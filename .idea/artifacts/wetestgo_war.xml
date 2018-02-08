@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="wetestgo:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="wetestgo.war">
+      <element id="artifact" artifact-name="wetestgo:war exploded" />
+    </root>
+  </artifact>
+</component>
