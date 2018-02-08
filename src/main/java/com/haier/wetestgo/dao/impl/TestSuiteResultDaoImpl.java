@@ -9,7 +9,8 @@ import com.haier.wetestgo.util.MyBatisUtil;
 import org.apache.ibatis.session.SqlSession;
 
 public class TestSuiteResultDaoImpl implements TestSuiteResultDao {
-	@Override
+
+    @Override
 	public List<TestResultDetail> queryResultDetailsByTestPurposeAndOperator(@SuppressWarnings("rawtypes") Map map) {
 		MyBatisUtil.DataSourceEnvironment environment = MyBatisUtil.DataSourceEnvironment.WETEST;
 

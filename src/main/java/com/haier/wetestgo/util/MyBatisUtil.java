@@ -55,7 +55,7 @@ public class MyBatisUtil {
      * @author libin1@kjtpay.com
      * @version 2017-3-27
      */  
-    public static enum DataSourceEnvironment {
+    public enum DataSourceEnvironment {
         SC,
         ZSC,
         CS,
