@@ -44,28 +44,28 @@
 			<table class="bordered">
 				<thead>
 					<tr>
-						<th id="test_id">testId</th>
-						<th id="service_name">被测服务</th>
-						<th id="interface_name">接口名称</th>
+						<th id="testId">testId</th>
+						<th id="serviceName">被测服务</th>
+						<th id="interfaceName">接口名称</th>
 						<th id="environment">测试环境</th>
-						<th id="suite_result">测试结果</th>
-						<!-- <th id="passed_cases">通过的用例数</th>
-					<th id="executed_cases">已执行的用例数</th>
-					<th id="total_cases">总用例数</th> -->
-						<th id="test_purpose">测试目的</th>
+						<th id="suiteResult">测试结果</th>
+						<!-- <th id="passedCases">通过的用例数</th>
+					<th id="executedCases">已执行的用例数</th>
+					<th id="totalCases">总用例数</th> -->
+						<th id="testPurpose">测试目的</th>
 						<th id="operator">测试人</th>
-						<th id="passed_rate">通过率</th>
-						<th id="gmt_create">开始时间</th>
-						<th id="gmt_update">结束时间</th>
-						<th id="suite_operation">操作</th>
+						<th id="passedRate">通过率</th>
+						<th id="gmtCreate">开始时间</th>
+						<th id="gmtUpdate">结束时间</th>
+						<th id="suiteOperation">操作</th>
 					</tr>
 				</thead>
 				<tbody>
 					<c:forEach items="${list}" var="cs">
 						<tr>
-							<td id="test_id">${cs.test_id}</td>
-							<td id="service_name">${cs.service_name}</td>
-							<td id="interface_name">${cs.interface_name}</td>
+							<td id="testId">${cs.testId}</td>
+							<td id="serviceName">${cs.serviceName}</td>
+							<td id="interfaceName">${cs.interfaceName}</td>
 							<c:choose>
 								<c:when test="${cs.environment.equalsIgnoreCase('zsc')}">
 									<td id="environment">准生产</td>
@@ -84,16 +84,16 @@
 								</c:otherwise>
 							</c:choose>
 
-							<td id="suite_result">${cs.suite_result}</td>
-							<td id="test_purpose">${cs.test_purpose}</td>
+							<td id="suiteResult">${cs.suiteResult}</td>
+							<td id="testPurpose">${cs.testPurpose}</td>
 							<td id="operator">${cs.operator}</td>
-							<td id="passed_rate">${cs.passed_rate}</td>
-							<td id="gmt_create"><fmt:formatDate value="${cs.gmt_create}"
+							<td id="passedRate">${cs.passedRate}</td>
+							<td id="gmtCreate"><fmt:formatDate value="${cs.gmtCreate}"
 									pattern="yyyy-MM-dd HH:mm:ss" /></td>
-							<td id="gmt_update"><fmt:formatDate value="${cs.gmt_update}"
+							<td id="gmtUpdate"><fmt:formatDate value="${cs.gmtUpdate}"
 									pattern="yyyy-MM-dd HH:mm:ss" /></td>
-							<td id="suite_operation"><a style="background-color: yellow"
-								onclick="viewSuiteResult(${cs.test_suite_id});">查看详细</a></td>
+							<td id="suiteOperation"><a style="background-color: yellow"
+								onclick="viewSuiteResult(${cs.testSuiteId});">查看详细</a></td>
 						</tr>
 					</c:forEach>
 				</tbody>

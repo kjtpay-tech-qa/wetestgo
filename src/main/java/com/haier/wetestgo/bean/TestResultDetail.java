@@ -9,62 +9,62 @@ import java.util.Date;
  * @date 2017年9月12日 下午4:36:18 
  */
 public class TestResultDetail {
-	private int test_id;
+	private int testId;
 	
 	private String result;
 	
-	private int suite_result_id;
+	private int suiteResultId;
 	
-	private int test_suite_id;
+	private int testSuiteId;
 	
-	private String service_name;
+	private String serviceName;
 	
-	private String interface_name;
+	private String interfaceName;
 	
 	private String environment;
 	
-	private String suite_result;
+	private String suiteResult;
 	
-	private String test_purpose;
+	private String testPurpose;
 	
 	private String operator;
 	
-	private int passed_cases;
+	private int passedCases;
 	
-	private int executed_cases;
+	private int executedCases;
 	
-	private int total_cases;
+	private int totalCases;
 	
-	private String passed_rate;
+	private String passedRate;
 	
-	private Date gmt_create;
+	private Date gmtCreate;
 	
-	private Date gmt_update;
+	private Date gmtUpdate;
 	
-	private String suite_file;
+	private String suiteFile;
 
-	public int getSuite_result_id() {
-		return suite_result_id;
+	public int getSuiteResultId() {
+		return suiteResultId;
 	}
 
-	public void setSuite_result_id(int suite_result_id) {
-		this.suite_result_id = suite_result_id;
+	public void setSuiteResultId(int suiteResultId) {
+		this.suiteResultId = suiteResultId;
 	}
 
-	public String getService_name() {
-		return service_name;
+	public String getServiceName() {
+		return serviceName;
 	}
 
-	public void setService_name(String service_name) {
-		this.service_name = service_name;
+	public void setServiceName(String serviceName) {
+		this.serviceName = serviceName;
 	}
 
-	public String getInterface_name() {
-		return interface_name;
+	public String getInterfaceName() {
+		return interfaceName;
 	}
 
-	public void setInterface_name(String interface_name) {
-		this.interface_name = interface_name;
+	public void setInterfaceName(String interfaceName) {
+		this.interfaceName = interfaceName;
 	}
 
 	public String getEnvironment() {
@@ -75,76 +75,76 @@ public class TestResultDetail {
 		this.environment = environment;
 	}
 
-	public String getSuite_result() {
-		return suite_result;
+	public String getSuiteResult() {
+		return suiteResult;
 	}
 
-	public void setSuite_result(String suite_result) {
-		this.suite_result = suite_result;
+	public void setSuiteResult(String suiteResult) {
+		this.suiteResult = suiteResult;
 	}
 
-	public int getPassed_cases() {
-		return passed_cases;
+	public int getPassedCases() {
+		return passedCases;
 	}
 
-	public void setPassed_cases(int passed_cases) {
-		this.passed_cases = passed_cases;
+	public void setPassedCases(int passedCases) {
+		this.passedCases = passedCases;
 	}
 
-	public int getExecuted_cases() {
-		return executed_cases;
+	public int getExecutedCases() {
+		return executedCases;
 	}
 
-	public void setExecuted_cases(int executed_cases) {
-		this.executed_cases = executed_cases;
+	public void setExecutedCases(int executedCases) {
+		this.executedCases = executedCases;
 	}
 
-	public int getTotal_cases() {
-		return total_cases;
+	public int getTotalCases() {
+		return totalCases;
 	}
 
-	public void setTotal_cases(int total_cases) {
-		this.total_cases = total_cases;
+	public void setTotalCases(int totalCases) {
+		this.totalCases = totalCases;
 	}
 
-	public String getPassed_rate() {
-		return passed_rate;
+	public String getPassedRate() {
+		return passedRate;
 	}
 
-	public void setPassed_rate(String passed_rate) {
-		this.passed_rate = passed_rate;
+	public void setPassedRate(String passedRate) {
+		this.passedRate = passedRate;
 	}
 
-	public Date getGmt_create() {
-		return gmt_create;
+	public Date getGmtCreate() {
+		return gmtCreate;
 	}
 
-	public void setGmt_create(Date gmt_create) {
-		this.gmt_create = gmt_create;
+	public void setGmtCreate(Date gmtCreate) {
+		this.gmtCreate = gmtCreate;
 	}
 
-	public Date getGmt_update() {
-		return gmt_update;
+	public Date getGmtUpdate() {
+		return gmtUpdate;
 	}
 
-	public void setGmt_update(Date gmt_update) {
-		this.gmt_update = gmt_update;
+	public void setGmtUpdate(Date gmtUpdate) {
+		this.gmtUpdate = gmtUpdate;
 	}
 
-	public String getSuite_file() {
-		return suite_file;
+	public String getSuiteFile() {
+		return suiteFile;
 	}
 
-	public void setSuite_file(String suite_file) {
-		this.suite_file = suite_file;
+	public void setSuiteFile(String suiteFile) {
+		this.suiteFile = suiteFile;
 	}
 
-	public int getTest_id() {
-		return test_id;
+	public int getTestId() {
+		return testId;
 	}
 
-	public void setTest_id(int test_id) {
-		this.test_id = test_id;
+	public void setTestId(int testId) {
+		this.testId = testId;
 	}
 
 	public String getResult() {
@@ -155,12 +155,12 @@ public class TestResultDetail {
 		this.result = result;
 	}
 
-	public String getTest_purpose() {
-		return test_purpose;
+	public String getTestPurpose() {
+		return testPurpose;
 	}
 
-	public void setTest_purpose(String test_purpose) {
-		this.test_purpose = test_purpose;
+	public void setTestPurpose(String testPurpose) {
+		this.testPurpose = testPurpose;
 	}
 
 	public String getOperator() {
@@ -171,12 +171,12 @@ public class TestResultDetail {
 		this.operator = operator;
 	}
 
-	public int getTest_suite_id() {
-		return test_suite_id;
+	public int getTestSuiteId() {
+		return testSuiteId;
 	}
 
-	public void setTest_suite_id(int test_suite_id) {
-		this.test_suite_id = test_suite_id;
+	public void setTestSuiteId(int testSuiteId) {
+		this.testSuiteId = testSuiteId;
 	}
 	
 	

@@ -19,8 +19,8 @@
 		from tb_case_result cr left join tb_case_detail cd
 		on cr.case_detail_id = cd.case_detail_id
 		where 1=1
-		<if test="test_suite_id != null">
-			and cd.test_suite_id = #{test_suite_id}
+		<if test="testSuiteId != null">
+			and cd.test_suite_id = #{testSuiteId}
 		</if>
 
 		) t

@@ -62,42 +62,42 @@ body:active,td:active,img:active,#tips:active,#search:active,li:active,a:active,
     
 }
 
-#test_id{
+#testId{
 	width: 5%;
 }
-#service_name, #interface_name {
+#serviceName, #interfaceName {
 	width: 15%;
 }
 #environment, #operator{
 	width:10%;
 }
-#suite_result, #passed_rate {
+#suiteResult, #passedRate {
 	width: 5%;
 }
-#gmt_create, #gmt_update, #test_purpose {
+#gmtCreate, #gmtUpdate, #testPurpose {
 	width: 10%;
 }
-#suite_operation {
+#suiteOperation {
 	width:5%;
 }
 
 
-#test_suite_id{
+#testSuiteId{
 	width: 5%;
 }
-#case_description{
+#caseDescription{
 	width: 10%;
 }
-#input_params{
+#inputParams{
 	width: 20%;
 }
-#baseline_params, #output_params{
+#baselineParams, #outputParams{
 	width: 25%;
 }
-#case_result{
+#caseResult{
 	width: 5%;
 }
-#gmt_update{
+#gmtUpdate{
 	width: 10%;
 }
 

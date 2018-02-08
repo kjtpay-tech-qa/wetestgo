@@ -42,10 +42,10 @@ public class CaseResultDetailServlet extends HttpServlet {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 		
 //		HttpSession session = request.getSession();
-		String test_suite_id = request.getParameter("test_suite_id");
+		String testSuiteId = request.getParameter("testSuiteId");
 		@SuppressWarnings("rawtypes")
 		Map map = new HashMap<>();
-		map.put("test_suite_id", test_suite_id);
+		map.put("testSuiteId", testSuiteId);
 		int pageindex = 1;
 		int pagesize = 100;
 		int startrow = (pageindex-1)*pagesize;
@@ -54,17 +54,17 @@ public class CaseResultDetailServlet extends HttpServlet {
 		List<CaseResultDetail> caseResultDetails = crdDao.queryCaseResultDetailsByTestSuiteId(map);
 		List<CaseResultDetail> caseResultDetailsNew = new ArrayList<>();
 		for(CaseResultDetail caseResultDetail : caseResultDetails) {
-			String input_params = caseResultDetail.getInput_params();
-			String output_params = caseResultDetail.getOutput_params();
-			String baseline_params = caseResultDetail.getBaseline_params();
+			String inputParams = caseResultDetail.getInputParams();
+			String outputParams = caseResultDetail.getOutputParams();
+			String baselineParams = caseResultDetail.getBaselineParams();
 			
-			input_params = JSON.toJSONString(JSON.parseObject(input_params), SerializerFeature.PrettyFormat);
-			output_params = JSON.toJSONString(JSON.parseObject(output_params), SerializerFeature.PrettyFormat);
-			baseline_params = JSON.toJSONString(JSON.parseObject(baseline_params), SerializerFeature.PrettyFormat);
+			inputParams = JSON.toJSONString(JSON.parseObject(inputParams), SerializerFeature.PrettyFormat);
+			outputParams = JSON.toJSONString(JSON.parseObject(outputParams), SerializerFeature.PrettyFormat);
+			baselineParams = JSON.toJSONString(JSON.parseObject(baselineParams), SerializerFeature.PrettyFormat);
 			
-			caseResultDetail.setInput_params(input_params);
-			caseResultDetail.setBaseline_params(baseline_params);
-			caseResultDetail.setOutput_params(output_params);
+			caseResultDetail.setInputParams(inputParams);
+			caseResultDetail.setBaselineParams(baselineParams);
+			caseResultDetail.setOutputParams(outputParams);
 			caseResultDetailsNew.add(caseResultDetail);
 		}
 		request.setAttribute("list",caseResultDetailsNew);

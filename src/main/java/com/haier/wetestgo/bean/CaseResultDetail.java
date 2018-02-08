@@ -10,96 +10,96 @@ import java.util.Date;
  */
 public class CaseResultDetail {
 
-	private int test_suite_id;
+	private int testSuiteId;
 	
-	private int case_detail_id;
+	private int caseDetailId;
 	
-	private String case_description;
+	private String caseDescription;
 	
-	private String input_params;
+	private String inputParams;
 	
-	private String output_params;
+	private String outputParams;
 	
-	private String baseline_params;
+	private String baselineParams;
 	
-	private Date gmt_create;
+	private Date gmtCreate;
 	
-	private Date gmt_update;
+	private Date gmtUpdate;
 	
-	private String case_result;
+	private String caseResult;
 
 
 
-	public int getTest_suite_id() {
-		return test_suite_id;
+	public int getTestSuiteId() {
+		return testSuiteId;
 	}
 
-	public void setTest_suite_id(int test_suite_id) {
-		this.test_suite_id = test_suite_id;
+	public void setTestSuiteId(int testSuiteId) {
+		this.testSuiteId = testSuiteId;
 	}
 
-	public int getCase_detail_id() {
-		return case_detail_id;
+	public int getCaseDetailId() {
+		return caseDetailId;
 	}
 
-	public void setCase_detail_id(int case_detail_id) {
-		this.case_detail_id = case_detail_id;
+	public void setCaseDetailId(int caseDetailId) {
+		this.caseDetailId = caseDetailId;
 	}
 
-	public Date getGmt_create() {
-		return gmt_create;
+	public Date getGmtCreate() {
+		return gmtCreate;
 	}
 
-	public void setGmt_create(Date gmt_create) {
-		this.gmt_create = gmt_create;
+	public void setGmtCreate(Date gmtCreate) {
+		this.gmtCreate = gmtCreate;
 	}
 
-	public Date getGmt_update() {
-		return gmt_update;
+	public Date getGmtUpdate() {
+		return gmtUpdate;
 	}
 
-	public void setGmt_update(Date gmt_update) {
-		this.gmt_update = gmt_update;
+	public void setGmtUpdate(Date gmtUpdate) {
+		this.gmtUpdate = gmtUpdate;
 	}
 
-	public String getCase_description() {
-		return case_description;
+	public String getCaseDescription() {
+		return caseDescription;
 	}
 
-	public void setCase_description(String case_description) {
-		this.case_description = case_description;
+	public void setCaseDescription(String caseDescription) {
+		this.caseDescription = caseDescription;
 	}
 
-	public String getInput_params() {
-		return input_params;
+	public String getInputParams() {
+		return inputParams;
 	}
 
-	public void setInput_params(String input_params) {
-		this.input_params = input_params;
+	public void setInputParams(String inputParams) {
+		this.inputParams = inputParams;
 	}
 
-	public String getOutput_params() {
-		return output_params;
+	public String getOutputParams() {
+		return outputParams;
 	}
 
-	public void setOutput_params(String output_params) {
-		this.output_params = output_params;
+	public void setOutputParams(String outputParams) {
+		this.outputParams = outputParams;
 	}
 
-	public String getBaseline_params() {
-		return baseline_params;
+	public String getBaselineParams() {
+		return baselineParams;
 	}
 
-	public void setBaseline_params(String baseline_params) {
-		this.baseline_params = baseline_params;
+	public void setBaselineParams(String baselineParams) {
+		this.baselineParams = baselineParams;
 	}
 
-	public String getCase_result() {
-		return case_result;
+	public String getCaseResult() {
+		return caseResult;
 	}
 
-	public void setCase_result(String case_result) {
-		this.case_result = case_result;
+	public void setCaseResult(String caseResult) {
+		this.caseResult = caseResult;
 	}
 	
 	

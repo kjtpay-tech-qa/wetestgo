@@ -44,29 +44,29 @@ request.setAttribute("vGreaterThan", ">");
 		<table class="bordered">
 			<thead>
 				<tr>
-					<th id="test_suite_id">testSuiteId</th>
-					<th id="case_description">用例描述</th>
-					<th id="input_params">接口入参</th>
-					<th id="baseline_params">预期返回</th>
-					<th id="output_params">实际返回</th>
-					<th id="case_result">执行结果</th>
-					<th id="gmt_update">测试时间</th>
+					<th id="testSuiteId">testSuiteId</th>
+					<th id="caseDescription">用例描述</th>
+					<th id="inputParams">接口入参</th>
+					<th id="baselineParams">预期返回</th>
+					<th id="outputParams">实际返回</th>
+					<th id="caseResult">执行结果</th>
+					<th id="gmtUpdate">测试时间</th>
 				</tr>
 			</thead>
 			<tbody>
 				<c:forEach items="${list}" var="cs">
 					<tr>
-						<td id="test_suite_id">${cs.test_suite_id}</td>
-						<td id="case_description">${cs.case_description}</td>
-						<td id="input_params">${fn:replace(cs.input_params,vEnter,"<BR />")}</td>
-						<td id="baseline_params">
-							${fn:replace(fn:replace(fn:replace(cs.baseline_params,vLessThan,"&lt;"),vGreaterThan,"&gt;"),vEnter,"<BR />")}
+						<td id="testSuiteId">${cs.testSuiteId}</td>
+						<td id="caseDescription">${cs.caseDescription}</td>
+						<td id="inputParams">${fn:replace(cs.inputParams,vEnter,"<BR />")}</td>
+						<td id="baselineParams">
+							${fn:replace(fn:replace(fn:replace(cs.baselineParams,vLessThan,"&lt;"),vGreaterThan,"&gt;"),vEnter,"<BR />")}
 						</td>
-						<td id="output_params">
-							${fn:replace(fn:replace(fn:replace(cs.output_params,vLessThan,"&lt;"),vGreaterThan,"&gt;"),vEnter,"<BR />")}
+						<td id="outputParams">
+							${fn:replace(fn:replace(fn:replace(cs.outputParams,vLessThan,"&lt;"),vGreaterThan,"&gt;"),vEnter,"<BR />")}
 						</td>
-						<td id="case_result">${cs.case_result}</td>
-						<td id="gmt_update"><fmt:formatDate value="${cs.gmt_update}"
+						<td id="caseResult">${cs.caseResult}</td>
+						<td id="gmtUpdate"><fmt:formatDate value="${cs.gmtUpdate}"
 								pattern="yyyy-MM-dd HH:mm:ss" /></td>
 					</tr>
 				</c:forEach>
