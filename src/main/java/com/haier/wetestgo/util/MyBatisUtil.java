@@ -12,9 +12,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class MyBatisUtil {
-	public MyBatisUtil() {
-		LogConfiguration.initLog();
-	}
 	private static final Logger logger = LoggerFactory.getLogger(MyBatisUtil.class);
 	
 	private static final String CONFIGURATION_PATH = "conf.xml";  
@@ -55,8 +52,8 @@ public class MyBatisUtil {
       
     /** 
      * 配置到Configuration.xml文件中的数据源的environment的枚举描述 
-     * @author boyce 
-     * @version 2014-3-27 
+     * @author libin1@kjtpay.com
+     * @version 2017-3-27
      */  
     public static enum DataSourceEnvironment {
         SC,

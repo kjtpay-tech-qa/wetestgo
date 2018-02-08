@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Configuration status="off" monitorInterval="1800">
+    <properties>
+        <property name="LOG_HOME">${sys:catalina.home}/logs</property>
+        <property name="LOG_FILE_NAME">wetestgo</property>
+    </properties>
+
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d %-5p (%l) - %m%n" />
+        </Console>
+        <RollingFile name="File"
+                                 fileName="${LOG_HOME}/${LOG_FILE_NAME}.log"
+                                 filePattern="${LOG_HOME}/${LOG_FILE_NAME}.log.%d{yyyy-MM-dd}.gz">
+            <PatternLayout pattern="%d %-5p (%F:%L) - %m%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy/>
+                <SizeBasedTriggeringPolicy size="100MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="20"/>
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <logger name="org.springframework" level="debug"/>
+        <!--<logger name="org.springframework.beans" level="info"/>-->
+        <!--<logger name="org.springframework.context" level="info"/>-->
+        <!--<logger name="org.springframework.web" level="info"/>-->
+        <!--<logger name="org.springframework.aop" level="info"/>-->
+        <!--<logger name="org.springframework.expression" level="info"/>-->
+        <!--<logger name="org.springframework" level="error" includeLocation="true" additivity="false">-->
+            <!--<appender-ref ref="ErrorLog"/>-->
+            <!--<appender-ref ref="Console"/>-->
+        <!--</logger>-->
+        <logger name="org.mybatis" level="debug"/>
+        <root level="debug" includeLocation="true">
+            <appender-ref ref="Console"/>
+            <appender-ref ref="File"/>
+        </root>
+    </Loggers>
+</Configuration>
