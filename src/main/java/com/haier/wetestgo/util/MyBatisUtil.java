@@ -14,9 +14,9 @@ import org.slf4j.LoggerFactory;
 public class MyBatisUtil {
 	private static final Logger logger = LoggerFactory.getLogger(MyBatisUtil.class);
 	
-	private static final String CONFIGURATION_PATH = "conf.xml";  
+	private static final String CONFIGURATION_PATH = "conf.xml";
     
-    private static final Map<DataSourceEnvironment, SqlSessionFactory> SQLSESSIONFACTORYS   
+    private static final Map<DataSourceEnvironment, SqlSessionFactory> SQL_SESSION_FACTORY
         = new HashMap<DataSourceEnvironment, SqlSessionFactory>();  
       
     /** 
@@ -27,7 +27,7 @@ public class MyBatisUtil {
     public static SqlSessionFactory getSqlSessionFactory(DataSourceEnvironment environment) {  
           
         SqlSessionFactory sqlSessionFactory = null;
-        sqlSessionFactory = SQLSESSIONFACTORYS.get(environment);
+        sqlSessionFactory = SQL_SESSION_FACTORY.get(environment);
         if (sqlSessionFactory != null)
             return sqlSessionFactory;
         else {  
@@ -45,7 +45,7 @@ public class MyBatisUtil {
 //                IOUtils.closeQuietly(inputStream);  
 //            }
               
-            SQLSESSIONFACTORYS.put(environment, sqlSessionFactory);  
+            SQL_SESSION_FACTORY.put(environment, sqlSessionFactory);
             return sqlSessionFactory;  
         }  
     }  

@@ -21,5 +21,6 @@
 	<mappers>
 		<mapper resource="TestSuiteResultMapper.xml" />
 		<mapper resource="CaseResultDetailMapper.xml" />
+		<mapper resource="CaseUseageMapper.xml" />
 	</mappers>
 </configuration>

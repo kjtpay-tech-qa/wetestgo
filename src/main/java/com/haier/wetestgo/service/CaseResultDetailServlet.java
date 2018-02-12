@@ -21,7 +21,7 @@ import com.haier.wetestgo.dao.CaseResultDetailDao;
 /**
  * Servlet implementation class CaseResultDetailServlet
  */
-@WebServlet("/caseResultDetail")
+@WebServlet(name = "CaseResultDetailServlet")
 public class CaseResultDetailServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     
@@ -70,7 +70,7 @@ public class CaseResultDetailServlet extends HttpServlet {
 		request.setAttribute("list",caseResultDetailsNew);
 		
 		try {
-            request.getRequestDispatcher("caseResultDetail.jsp").forward(request,
+            request.getRequestDispatcher("WEB-INF/jsp/caseResultDetail.jsp").forward(request,
                     response);
         } catch (ServletException e) {
             e.printStackTrace();

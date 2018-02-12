@@ -18,7 +18,7 @@ import com.haier.wetestgo.dao.impl.TestSuiteResultDaoImpl;
 /**
  * Servlet implementation class WeTestServlet
  */
-@WebServlet("/testResultDetail")
+@WebServlet(name = "WeTestServlet")
 public class WeTestServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     
@@ -55,7 +55,7 @@ public class WeTestServlet extends HttpServlet {
 		request.setAttribute("list",testResultDetails);
 
 		try {
-            request.getRequestDispatcher("testResultDetail.jsp").forward(request,
+            request.getRequestDispatcher("WEB-INF/jsp/testResultDetail.jsp").forward(request,
                     response);
         } catch (ServletException e) {
             e.printStackTrace();
