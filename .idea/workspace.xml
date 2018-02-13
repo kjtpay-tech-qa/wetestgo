@@ -6,53 +6,8 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="bdcb923d-b6f8-49ff-9419-5547e8971ed2" name="Default" comment="完善log4j2日志">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/404-1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_freemarker_freemarker_2_3_27_incubating.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_4_3_8_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/haier/wetestgo/bean/BaseCase.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/haier/wetestgo/dao/BaseCaseDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/haier/wetestgo/dao/impl/BaseCaseDaoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/haier/wetestgo/service/ReportWordServlet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/haier/wetestgo/util/WordGenerator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/CaseUseageMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/404.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/reportWord.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/webBaseCase.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/view/welcom.ftl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/view/wordReportTemplate.ftl" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/haier/wetestgo/service/BaseCaseServlet.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/haier/wetestgo/service/BaseCaseServlet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wetestgo/WEB-INF/classes/com/haier/wetestgo/service/BaseCaseServlet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wetestgo/caseResultDetail.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wetestgo/index.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wetestgo/testResultDetail.jsp" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/haier/wetestgo/controller/WeTestController.class" afterPath="$PROJECT_DIR$/target/classes/com/haier/wetestgo/controller/WeTestController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/haier/wetestgo/service/WeTestServlet.class" afterPath="$PROJECT_DIR$/target/classes/com/haier/wetestgo/service/WeTestServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/haier/wetestgo/util/MyBatisUtil$DataSourceEnvironment.class" afterPath="$PROJECT_DIR$/target/classes/com/haier/wetestgo/util/MyBatisUtil$DataSourceEnvironment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/haier/wetestgo/util/MyBatisUtil.class" afterPath="$PROJECT_DIR$/target/classes/com/haier/wetestgo/util/MyBatisUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/wetestgo/WEB-INF/classes/com/haier/wetestgo/controller/WeTestController.class" afterPath="$PROJECT_DIR$/target/wetestgo/WEB-INF/classes/com/haier/wetestgo/controller/WeTestController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/wetestgo/WEB-INF/classes/com/haier/wetestgo/service/WeTestServlet.class" afterPath="$PROJECT_DIR$/target/wetestgo/WEB-INF/classes/com/haier/wetestgo/service/WeTestServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/wetestgo/WEB-INF/classes/com/haier/wetestgo/util/MyBatisUtil$DataSourceEnvironment.class" afterPath="$PROJECT_DIR$/target/wetestgo/WEB-INF/classes/com/haier/wetestgo/util/MyBatisUtil$DataSourceEnvironment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/wetestgo/WEB-INF/classes/com/haier/wetestgo/util/MyBatisUtil.class" afterPath="$PROJECT_DIR$/target/wetestgo/WEB-INF/classes/com/haier/wetestgo/util/MyBatisUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/wetestgo_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/wetestgo_war_exploded.xml" />
+    <list default="true" readonly="true" id="bdcb923d-b6f8-49ff-9419-5547e8971ed2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/haier/wetestgo/controller/WeTestController.java" afterPath="$PROJECT_DIR$/src/main/java/com/haier/wetestgo/controller/WeTestController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/haier/wetestgo/service/CaseResultDetailServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/haier/wetestgo/service/CaseResultDetailServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/haier/wetestgo/service/WeTestServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/haier/wetestgo/service/WeTestServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/haier/wetestgo/util/MyBatisUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/haier/wetestgo/util/MyBatisUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/conf.xml" afterPath="$PROJECT_DIR$/src/main/resources/conf.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/springmvc-servlet.xml" afterPath="$PROJECT_DIR$/src/main/resources/springmvc-servlet.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/springmvc-servlet.xml" afterPath="$PROJECT_DIR$/target/classes/springmvc-servlet.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/wetestgo/WEB-INF/classes/springmvc-servlet.xml" afterPath="$PROJECT_DIR$/target/wetestgo/WEB-INF/classes/springmvc-servlet.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wetestgo.iml" afterPath="$PROJECT_DIR$/wetestgo.iml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/caseResultDetail.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/caseResultDetail.jsp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index.jsp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/testResultDetail.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/testResultDetail.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -79,8 +34,8 @@
       <file leaf-file-name="ReportWordServlet.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/haier/wetestgo/service/ReportWordServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="34" column="37" lean-forward="true" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
+            <state relative-caret-position="221">
+              <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -649,7 +604,7 @@
       <option name="presentableId" value="Default" />
       <updated>1517995451662</updated>
       <workItem from="1517995455891" duration="9017000" />
-      <workItem from="1518339745817" duration="27349000" />
+      <workItem from="1518339745817" duration="28084000" />
     </task>
     <task id="LOCAL-00001" summary="首次提交">
       <created>1518057293261</created>
@@ -693,11 +648,18 @@
       <option name="project" value="LOCAL" />
       <updated>1518080425790</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="url下载的方式获取测试报告word格式">
+      <created>1518428916717</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1518428916717</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59385000" />
+    <option name="totallyTimeSpent" value="60120000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -730,7 +692,7 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32849163" sideWeight="0.49573562" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5173184" sideWeight="0.49573562" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5173184" sideWeight="0.49573562" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25266525" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -760,7 +722,8 @@
     <MESSAGE value="更新idea配置" />
     <MESSAGE value="添加.gitignore" />
     <MESSAGE value="完善log4j2日志" />
-    <option name="LAST_COMMIT_MESSAGE" value="完善log4j2日志" />
+    <MESSAGE value="url下载的方式获取测试报告word格式" />
+    <option name="LAST_COMMIT_MESSAGE" value="url下载的方式获取测试报告word格式" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -802,6 +765,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -952,6 +918,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1189,8 +1156,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/haier/wetestgo/service/ReportWordServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="34" column="37" lean-forward="true" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
+        <state relative-caret-position="221">
+          <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
