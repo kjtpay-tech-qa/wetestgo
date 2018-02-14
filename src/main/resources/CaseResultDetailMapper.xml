@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.haier.wetestgo.bean.CaseResultDetailMapper">
+<mapper namespace="CaseResultDetailMapper">
 	<sql id="tb_case_result">
 		cr.case_result, cr.gmt_create, cr.gmt_update
 	</sql>
@@ -28,7 +28,6 @@
 		<if test="startrow != null and pagesize != null">
 			limit #{startrow,jdbcType=INTEGER},#{pagesize,jdbcType=INTEGER}
 		</if>
-		
 	</select>
 
 

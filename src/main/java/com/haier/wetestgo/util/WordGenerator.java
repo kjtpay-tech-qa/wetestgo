@@ -7,58 +7,85 @@ import sun.misc.BASE64Encoder;
 import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Random;
 
 import static freemarker.template.Configuration.DEFAULT_INCOMPATIBLE_IMPROVEMENTS;
 
+/**
+ * The type Word generator.
+ *
+ * @author libin1@kjtpay.com
+ * @date 2018/2/13
+ */
 public class WordGenerator {
-    private static Map<String, Template> allTemplates = null;
-//    private static InputStream inputStream = WordGenerator.class.getResourceAsStream("com/haier/wetestgo/template/wordReportTemplate.ftl");
+    /**
+     * The All templates.
+     */
+    private Map<String, Template> allTemplates;
+    private String templateName;
 
-    //    private static File file = new File("wordReportTemplate.ftl");
-    static {
+    /**
+     * Instantiates a new Word generator.
+     *
+     * @param templatePath the template path
+     * @param templateName the template name
+     */
+    public WordGenerator(String templatePath, String templateName) {
+        this.templateName = templateName;
         Configuration configuration = new Configuration(DEFAULT_INCOMPATIBLE_IMPROVEMENTS);
         configuration.setDefaultEncoding("utf-8");
 //        configuration.setClassForTemplateLoading(WordGenerator.class, "");
         try {
-            String templatePath = WordGenerator.class.getClassLoader().getResource("/template").getPath();
             configuration.setDirectoryForTemplateLoading(new File(templatePath));
         } catch (IOException e1) {
             e1.printStackTrace();
         }
         allTemplates = new HashMap<>();
         try {
-            allTemplates.put("resume", configuration.getTemplate("wordReportTemplate.ftl"));
+            allTemplates.put(templateName, configuration.getTemplate(templateName));
         } catch (IOException e) {
             e.printStackTrace();
             throw new RuntimeException(e);
         }
     }
 
+    /**
+     * Instantiates a new Word generator.
+     */
     private WordGenerator() {
         throw new AssertionError();
     }
 
-    public static File createDoc(Map<?, ?> dataMap, String type) {
-        String name = "temp" + (new Random().nextInt() * 100000) + ".doc";
-
-        File f = new File(name);
-        Template t = allTemplates.get(type);
+    /**
+     * Create doc file.
+     *
+     * @param dataMap      the data map
+     * @param templateName the template name
+     * @param document     the document
+     * @return the file
+     */
+    public File createDoc(Map dataMap, File document) {
+        Template template = allTemplates.get(templateName);
         try {
-            // 这个地方不能使用FileWriter因为需要指定编码类型否则生成的Word文档会因为有无法识别的编码而无法打开
-            Writer w = new OutputStreamWriter(new FileOutputStream(f), "utf-8");
-            t.process(dataMap, w);
-            w.flush();
-            w.close();
-        } catch (Exception ex) {
-            ex.printStackTrace();
-            throw new RuntimeException(ex);
+            //这个地方不能使用FileWriter因为需要指定编码类型否则生成的Word文档会因为有无法识别的编码而无法打开
+            Writer writer = new OutputStreamWriter(new FileOutputStream(document), "utf-8");
+            template.process(dataMap, writer);
+            writer.flush();
+            writer.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
         }
-        return f;
+        return document;
     }
 
-    //将图片转换成BASE64字符串
-    public static String getImageString(InputStream in) throws IOException {
+    /**
+     * 将图片转换成BASE64字符串.
+     *
+     * @param in the in
+     * @return the image string
+     * @throws IOException the io exception
+     */
+    public String getImageString(InputStream in) throws IOException {
         //InputStream in = null;
         byte[] data = null;
         try {
@@ -78,7 +105,13 @@ public class WordGenerator {
     }
 
 
-    public static void inputstreamtofile(InputStream ins, File file) {
+    /**
+     * Inputstreamtofile.
+     *
+     * @param ins  the ins
+     * @param file the file
+     */
+    public void inputstreamtofile(InputStream ins, File file) {
         try {
             OutputStream os = new FileOutputStream(file);
             int bytesRead = 0;

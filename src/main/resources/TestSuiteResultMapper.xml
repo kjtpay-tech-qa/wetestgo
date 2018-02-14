@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.haier.wetestgo.bean.TestSuiteResultMapper">
+<mapper namespace="TestSuiteResultMapper">
 	<sql id="tb_test_result">
 		tr.test_id, tr.result, tr.test_purpose, tr.operator
 	</sql>
@@ -11,7 +11,7 @@
 		ts.service_name, ts.interface_name, ts.suite_file, ts.environment
 	</sql>
 
-	<select id="queryResultDetailsByTestPurposeAndOperator" resultType="com.haier.wetestgo.bean.TestResultDetail" parameterType="java.util.Map">
+	<select id="queryResultDetails" resultType="com.haier.wetestgo.bean.TestResultDetail" parameterType="java.util.Map">
 		select test_id,result,test_purpose,operator,gmt_create,gmt_update, test_suite_id,suite_result,passed_cases,executed_cases,total_cases,passed_rate,service_name,interface_name,suite_file,environment
 		from
 		(

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="TestResultMapper">
+	<sql id="tb_test_result">
+		tr.test_id, tr.result, tr.test_purpose, tr.operator, tr.gmt_create, tr.gmt_update
+	</sql>
+
+	<select id="queryTestResult" resultType="com.haier.wetestgo.bean.TestResult" parameterType="java.lang.Integer">
+		select 
+		<include refid="tb_test_result" />
+		from tb_test_result tr
+		where 1=1
+		<if test="_parameter != null">
+			and tr.test_id = #{_parameter, jdbcType=INTEGER}
+		</if>
+	</select>
+
+
+</mapper>

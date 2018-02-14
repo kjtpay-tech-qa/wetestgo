@@ -1,5 +1,6 @@
 package com.haier.wetestgo.dao;
 
+import com.haier.wetestgo.bean.Assertion;
 import com.haier.wetestgo.bean.BaseCase;
 
 import java.util.List;
@@ -23,9 +24,17 @@ public interface BaseCaseDao {
     /**
      * Filter base case list.
      *
-     * @param map the sql statement
+     * @param map the map
      * @return the list
      */
     List<BaseCase> filterBaseCase(Map map);
 
+
+    /**
+     * Gets assertion.
+     *
+     * @param map the map
+     * @return the assertion
+     */
+    List<Assertion> getAssertion(Map map);
 }

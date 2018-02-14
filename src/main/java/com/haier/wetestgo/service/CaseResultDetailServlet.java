@@ -40,8 +40,7 @@ public class CaseResultDetailServlet extends HttpServlet {
 	@SuppressWarnings("unchecked")
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
-		
-//		HttpSession session = request.getSession();
+
 		String testSuiteId = request.getParameter("testSuiteId");
 		@SuppressWarnings("rawtypes")
 		Map map = new HashMap<>();
@@ -69,14 +68,9 @@ public class CaseResultDetailServlet extends HttpServlet {
 		}
 		request.setAttribute("list",caseResultDetailsNew);
 		
-		try {
-            request.getRequestDispatcher("WEB-INF/jsp/caseResultDetail.jsp").forward(request,
-                    response);
-        } catch (ServletException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
+		request.getRequestDispatcher("WEB-INF/jsp/caseResultDetail.jsp").forward(request, response);
+
 	}
 
 	/**

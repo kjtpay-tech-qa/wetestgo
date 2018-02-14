@@ -96,16 +96,6 @@
     </init-param>
   </servlet>
 
-  <servlet>
-    <description>ReportWordServlet</description>
-    <servlet-name>ReportWordServlet</servlet-name>
-    <servlet-class>com.haier.wetestgo.service.ReportWordServlet</servlet-class>
-    <init-param>
-      <param-name>character</param-name>
-      <param-value>UTF-8</param-value>
-    </init-param>
-  </servlet>
-
   <servlet-mapping>
     <servlet-name>WeTestServlet</servlet-name>
     <url-pattern>/testResultDetail</url-pattern>
@@ -113,10 +103,6 @@
   <servlet-mapping>
     <servlet-name>CaseResultDetailServlet</servlet-name>
     <url-pattern>/caseResultDetail</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>ReportWordServlet</servlet-name>
-    <url-pattern>/reportWord</url-pattern>
   </servlet-mapping>
 
 </web-app>

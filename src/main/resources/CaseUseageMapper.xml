@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="CaseUseageMapper">
     <sql id="TB_WEB_BASE_CASE_REF">
-        case_id, is_run, team_id, env_id, service_id, function_id, comment, operation_steps, case_level, pre_action, execution_mode, execution_post_action, post_action, gmt_create, gmt_update
+        case_id, is_run, team_id, environment, service_id, function_id, comment, operation_steps, case_level, pre_action, execution_mode, execution_post_action, post_action, gmt_create, gmt_update
     </sql>
     <!-- 根据sql获取用例TB_WEB_BASE_CASE -->
     <select id="getBaseCase" resultType="com.haier.wetestgo.bean.BaseCase" parameterType="java.lang.String">
@@ -25,8 +25,8 @@
         <if test="team_id != null">
             and team_id = #{team_id,jdbcType=INTEGER}
         </if>
-        <if test="env_id != null">
-            and env_id = #{env_id,jdbcType=INTEGER}
+        <if test="environment != null">
+            and environment = #{environment,jdbcType=VARCHAR}
         </if>
         <if test="service_id != null">
             and service_id = #{service_id,jdbcType=INTEGER}
@@ -47,5 +47,32 @@
         </if>
     </select>
 
+    <!--获取断言表TB_ASSERT数据-->
+    <select id="getAssertion" resultType="com.haier.wetestgo.bean.Assertion" parameterType="java.util.Map">
+        select
+        assert_id, case_id, team_id, environment, type, statement, gmt_create, gmt_update
+        from TB_ASSERT
+        where 1=1
+        <if test="assert_id != null">
+            and assert_id = #{assert_id,jdbcType=INTEGER}
+        </if>
+        <if test="case_id != null">
+            and case_id = #{case_id,jdbcType=INTEGER}
+        </if>
+        <if test="team_id != null">
+            and team_id = #{team_id,jdbcType=INTEGER}
+        </if>
+        <if test="environment != null">
+            and environment = #{environment,jdbcType=VARCHAR}
+        </if>
+        <if test="begin_date != null and begin_date != ''">
+            and gmt_update <![CDATA[>=]]>
+            str_to_date(#{begin_date}, '%Y-%m-%d %T')
+        </if>
+        <if test="end_date != null and end_date != ''">
+            and gmt_update <![CDATA[<=]]>
+            str_to_date(#{end_date}, '%Y-%m-%d %T')
+        </if>
+    </select>
 
 </mapper>

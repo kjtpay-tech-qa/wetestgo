@@ -1,5 +1,6 @@
 package com.haier.wetestgo.dao.impl;
 
+import com.haier.wetestgo.bean.Assertion;
 import com.haier.wetestgo.bean.BaseCase;
 import com.haier.wetestgo.dao.BaseCaseDao;
 import com.haier.wetestgo.util.MyBatisUtil;
@@ -41,13 +42,18 @@ public class BaseCaseDaoImpl implements BaseCaseDao {
 
     @Override
     public List<BaseCase> filterBaseCase(Map map) {
+        return null;
+    }
+
+    @Override
+    public List<Assertion> getAssertion(Map map) {
         MyBatisUtil.DataSourceEnvironment environment = MyBatisUtil.DataSourceEnvironment.WETEST;
-        List<BaseCase> baseCaseList = new ArrayList<>();
+        List<Assertion> assertionList = new ArrayList<>();
         SqlSession session = null;
         try {
             session = MyBatisUtil.getSqlSessionFactory(environment).openSession();
-            String statement = "CaseUseageMapper.filterBaseCase";
-            baseCaseList = session.selectList(statement, map);
+            String statement = "CaseUseageMapper.getAssertion";
+            assertionList = session.selectList(statement, map);
             session.commit();
         } catch (Exception e) {
             e.printStackTrace();
@@ -59,8 +65,6 @@ public class BaseCaseDaoImpl implements BaseCaseDao {
                 session.close();
             }
         }
-        return baseCaseList;
+        return assertionList;
     }
-
-
 }

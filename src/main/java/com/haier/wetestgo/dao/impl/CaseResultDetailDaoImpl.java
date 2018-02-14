@@ -11,29 +11,28 @@ import com.haier.wetestgo.util.MyBatisUtil;
 import com.haier.wetestgo.util.MyBatisUtil.DataSourceEnvironment;
 
 public class CaseResultDetailDaoImpl implements CaseResultDetailDao {
+    @Override
+    public List<CaseResultDetail> queryCaseResultDetailsByTestSuiteId(@SuppressWarnings("rawtypes") Map map) {
+        DataSourceEnvironment environment = MyBatisUtil.DataSourceEnvironment.WETEST;
 
-	@Override
-	public List<CaseResultDetail> queryCaseResultDetailsByTestSuiteId(@SuppressWarnings("rawtypes") Map map) {
-		DataSourceEnvironment environment = MyBatisUtil.DataSourceEnvironment.WETEST;
-
-		SqlSession session = null;  
-        try{
-            session= MyBatisUtil.getSqlSessionFactory(environment).openSession();
-            String statement = "com.haier.wetestgo.bean.CaseResultDetailMapper.queryCaseResultDetailsByTestSuiteId";
+        SqlSession session = null;
+        try {
+            session = MyBatisUtil.getSqlSessionFactory(environment).openSession();
+            String statement = "CaseResultDetailMapper.queryCaseResultDetailsByTestSuiteId";
             List<CaseResultDetail> caseResultDetails = session.selectList(statement, map);
             session.commit();
             return caseResultDetails;
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
-            if(session != null) {
-            	session.rollback();
+            if (session != null) {
+                session.rollback();
             }
-        }finally{
-            if(session != null){
+        } finally {
+            if (session != null) {
                 session.close();
             }
         }
         return null;
-	}
+    }
 
 }

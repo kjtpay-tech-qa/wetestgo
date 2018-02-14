@@ -11,13 +11,13 @@ import org.apache.ibatis.session.SqlSession;
 public class TestSuiteResultDaoImpl implements TestSuiteResultDao {
 
     @Override
-	public List<TestResultDetail> queryResultDetailsByTestPurposeAndOperator(@SuppressWarnings("rawtypes") Map map) {
+	public List<TestResultDetail> queryResultDetails(@SuppressWarnings("rawtypes") Map map) {
 		MyBatisUtil.DataSourceEnvironment environment = MyBatisUtil.DataSourceEnvironment.WETEST;
 
 		SqlSession session = null;  
         try{
             session= MyBatisUtil.getSqlSessionFactory(environment).openSession();
-            String statement = "com.haier.wetestgo.bean.TestSuiteResultMapper.queryResultDetailsByTestPurposeAndOperator";
+            String statement = "TestSuiteResultMapper.queryResultDetails";
             List<TestResultDetail> testResultDetails = session.selectList(statement, map);
             session.commit();
             return testResultDetails;

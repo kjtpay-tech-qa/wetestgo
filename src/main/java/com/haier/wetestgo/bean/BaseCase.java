@@ -12,7 +12,7 @@ public class BaseCase {
     private int caseId;
     private int isRun;
     private int teamId;
-    private int envId;
+    private String environment;
     private int serviceId;
     private int functionId;
     private String comment;
@@ -57,12 +57,12 @@ public class BaseCase {
         this.teamId = teamId;
     }
 
-    public int getEnvId() {
-        return envId;
+    public String getEnvironment() {
+        return environment;
     }
 
-    public void setEnvId(int envId) {
-        this.envId = envId;
+    public void setEnvironment(String environment) {
+        this.environment = environment;
     }
 
     public int getFunctionId() {

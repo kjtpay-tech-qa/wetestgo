@@ -16,17 +16,29 @@ import com.haier.wetestgo.dao.TestSuiteResultDao;
 import com.haier.wetestgo.dao.impl.TestSuiteResultDaoImpl;
 
 /**
- * Servlet implementation class WeTestServlet
+ * The type We test servlet.
+ *
+ * @author libin1@kjtpay.com
+ * @date 2018/2/13
  */
 @WebServlet(name = "WeTestServlet")
 public class WeTestServlet extends HttpServlet {
+	/**
+	 * The constant serialVersionUID.
+	 */
 	private static final long serialVersionUID = 1L;
-    
+
+	/**
+	 * The Tsr dao.
+	 */
 	private TestSuiteResultDao tsrDao = new TestSuiteResultDaoImpl();
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public WeTestServlet() {
+
+	/**
+	 * Instantiates a new We test servlet.
+	 *
+	 * @see HttpServlet#HttpServlet() HttpServlet#HttpServlet()
+	 */
+	public WeTestServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -41,16 +53,18 @@ public class WeTestServlet extends HttpServlet {
 //		HttpSession session = request.getSession();
 		String test_purpose = request.getParameter("test_purpose");
 		String operator = request.getParameter("operator");
+		String testId = request.getParameter("testId");
 		@SuppressWarnings("rawtypes")
 		Map map = new HashMap<>();
 		map.put("test_purpose", test_purpose);
 		map.put("operator", operator);
+		map.put("testId", testId);
 		int pageindex = 1;
 		int pagesize = 100;
 		int startrow = (pageindex-1)*pagesize;
 		map.put("startrow", startrow);
 		map.put("pagesize", pagesize);
-		List<TestResultDetail> testResultDetails = tsrDao.queryResultDetailsByTestPurposeAndOperator(map);
+		List<TestResultDetail> testResultDetails = tsrDao.queryResultDetails(map);
 
 		request.setAttribute("list",testResultDetails);
 
